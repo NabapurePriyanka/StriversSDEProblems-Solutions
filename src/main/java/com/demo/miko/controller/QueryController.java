@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
+@RequestMapping("/api/v1")
 public class QueryController {
     @Autowired
     private final TableMetadataRepository tableMetadataRepository;
