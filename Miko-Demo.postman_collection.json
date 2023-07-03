@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "86f20460-5c3c-4108-ac25-9b9760b982d9",
+		"name": "M Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23569428"
+	},
+	"item": [
+		{
+			"name": "List User Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/query"
+			},
+			"response": []
+		},
+		{
+			"name": "Insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tableName\": \"Venus\",\r\n  \"rows\": [\r\n    {\r\n      \"columnValues\": {\r\n        \"id\": 1,\r\n        \"name\": \"Mercury\"\r\n      }\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/insert"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tableName\": \"Venus\",\r\n    \"columns\": [\r\n        {\r\n            \"name\": \"id\",\r\n            \"type\": \"INTEGER\"\r\n        },\r\n        {\r\n            \"name\": \"name\",\r\n            \"type\": \"STRING\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/tables"
+			},
+			"response": []
+		},
+		{
+			"name": "List Tables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/tables"
+			},
+			"response": []
+		},
+		{
+			"name": "List User Query by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/query/1"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://0.0.0.0:8080/api/v1",
+			"type": "string"
+		}
+	]
+}
