@@ -1,0 +1,25 @@
+version: '3'
+services:
+  demo-miko:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: demo-miko
+    ports:
+      - 8080:8001
+    depends_on:
+      - redis
+    networks:
+      - redis
+
+  redis:
+    image: redis
+    container_name: redis
+    hostname: redis
+    ports:
+      - 6379:6379
+    networks:
+      - redis
+
+networks:
+  redis:

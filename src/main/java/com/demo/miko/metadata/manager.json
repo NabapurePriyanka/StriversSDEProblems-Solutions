@@ -1,0 +1,1 @@
+[{"tableName":"manager","columns":[{"name":"id","type":"INTEGER"},{"name":"name","type":"STRING"}]}]
